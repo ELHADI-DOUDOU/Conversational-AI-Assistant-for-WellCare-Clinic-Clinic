@@ -1,49 +1,59 @@
-Conversational AI Assistant for Good Health Clinic
+Conversational AI Assistant for WellCare Clinic
 
-An AI-powered assistant for Good Health Clinic that helps patients with appointment scheduling, medical profile tracking, and intelligent responses based on patient history.
+An AI-powered assistant designed for WellCare Clinic to help patients with appointment scheduling, medical profile tracking, and intelligent health-related conversations powered by memory and patient history.
 
-This project uses LangGraph, LangChain, FastAPI, and OpenAI GPT models to simulate a real-world conversational medical assistant.
+This project leverages LangGraph, LangChain, FastAPI, and OpenAI GPT models to simulate a real-world medical assistant.
 
 🚀 Features
 
-🧑‍⚕️ Conversational AI Assistant – provides personalised responses based on patient history
+🧑‍⚕️ Conversational AI Assistant – provides personalised responses using patient history
 
 📅 Appointment Scheduling – manages routine and follow-up visits
 
-📝 Patient Profile Management – stores medical notes, allergies, treatments, and medications
+📝 Patient Profile Management – tracks medical notes, allergies, treatments, and medications
 
-⚠️ Emergency Handling – detects urgent cases and escalates with emergency contacts
+⚠️ Emergency Handling – detects urgent cases and escalates to emergency contacts
 
-💾 Memory – stores patient interactions and history for continuity
+💾 Memory – stores patient interactions for continuity
 
 📂 Project Structure
-good_health_assistant/
-│── main.py              # FastAPI server entrypoint
-│── clinic_graph.py       # LangGraph workflow for patient interactions
-│── requirements.txt      # Python dependencies
-│── README.md             # Project documentation
+wellcare_assistant/
+│── main.py            # FastAPI server entrypoint
+│── clinic_graph.py    # LangGraph workflow for patient interactions
+│── requirements.txt   # Python dependencies
+│── README.md          # Project documentation
+│── .env.example       # Example environment file (without secrets)
 
 🔧 Installation
-1. Clone the repository
-git clone https://github.com/your-username/good_health_assistant.git
-cd good_health_assistant
 
-2. Create a virtual environment
+Clone the repository
+
+git clone https://github.com/ELHADI-DOUDOU/Conversational-AI-Assistant-for-WellCare-Clinic-Clinic.git
+cd Conversational-AI-Assistant-for-WellCare-Clinic-Clinic
+
+
+Create a virtual environment
+
 python -m venv venv
-source venv/bin/activate   # On Linux/Mac
-venv\Scripts\activate      # On Windows
+# On Linux/Mac
+source venv/bin/activate
+# On Windows
+venv\Scripts\activate
 
-3. Install dependencies
+
+Install dependencies
+
 pip install -r requirements.txt
 
-4. Set your OpenAI API key
 
-Create a .env file in the project root and add:
+Set your OpenAI API key
+
+Create a .env file in the project root:
 
 OPENAI_API_KEY=your_api_key_here
 
 
-Verify it’s loaded correctly:
+✅ Verify it’s loaded:
 
 import os
 from dotenv import load_dotenv
@@ -57,31 +67,28 @@ Start the FastAPI server:
 uvicorn main:app --reload
 
 
-Server will run at:
+Server will be available at:
 
-http://127.0.0.1:8000
+API Root → http://127.0.0.1:8000
 
-
-Check interactive API docs:
-
-http://127.0.0.1:8000/docs
+Interactive Docs → http://127.0.0.1:8000/docs
 
 💬 Example Usage
 
-Send a POST request to /chat:
+Send a chat request:
 
 curl -X 'POST' \
-  'http://127.0.0.1:8000/chat' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
+'http://127.0.0.1:8000/chat' \
+-H 'accept: application/json' \
+-H 'Content-Type: application/json' \
+-d '{
   "patient_id": "1",
   "thread_id": "conv1",
   "message": "Hello, I need to book an appointment for next week"
 }'
 
 
-Example Response:
+Example response:
 
 {
   "response": "Sure! I can help you schedule an appointment. Could you tell me which day and time works best for you?"
@@ -89,20 +96,15 @@ Example Response:
 
 🛠️ Tech Stack
 
-LangGraph
- – Graph-based conversational workflows
+LangGraph – Graph-based conversational workflows
 
-LangChain
- – LLM orchestration
+LangChain – LLM orchestration
 
-FastAPI
- – API framework
+FastAPI – API framework
 
-OpenAI GPT
- – LLM backend
+OpenAI GPT – LLM backend
 
-Uvicorn
- – ASGI server
+Uvicorn – ASGI server
 
 📌 Roadmap
 
@@ -116,10 +118,8 @@ Uvicorn
 
 ⚠️ Disclaimer
 
-This project is a prototype for educational purposes.
-It should not be used as a replacement for professional medical advice.
-Always consult qualified healthcare professionals for medical concerns."# Conversational-AI-Assistant-for-WellCare-Clinic-Clinic" 
-"# Conversational-AI-Assistant-for-WellCare-Clinic-Clinic" 
-"# Conversational-AI-Assistant-for-WellCare-Clinic-Clinic" 
+This project is a prototype for educational purposes only.
+It must not be used as a replacement for professional medical advice.
+Always consult qualified healthcare professionals for any medical concerns.
 "# Conversational-AI-Assistant-for-WellCare-Clinic-Clinic" 
 "# Conversational-AI-Assistant-for-WellCare-Clinic-Clinic" 
